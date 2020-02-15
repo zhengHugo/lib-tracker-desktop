@@ -1,0 +1,14 @@
+{
+  "name": "lib-tracker-electron",
+  "version": "1.0.0",
+  "description": "lib-tracker desktop app built with electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Hugo Zheng",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^8.0.0"
+  }
+}
