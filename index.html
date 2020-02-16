@@ -12,12 +12,16 @@ We are using node
 
 <label for="track-date">Tracking date:</label>
 
-<input type="date" id="track-date" name="track-date"
-       value=""
-       min="2018-01-01" max="2018-12-31">
+<input type="date" id="track-date" name="track-date">
 
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script>
-
+    $(window).on('load', function() {
+        const trackDate = $('#track-date');
+        trackDate.attr('value', new Date().toISOString().substring(0,10));
+        trackDate.attr('min', new Date().getFullYear() + '-01-01');
+        trackDate.attr('max', new Date(). getFullYear() + '-12-31');
+    });
 </script>
 
 </body>
