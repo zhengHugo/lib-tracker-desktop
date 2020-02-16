@@ -14,15 +14,11 @@ We are using node
 
 <input type="date" id="track-date" name="track-date">
 
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script>
-    $(window).on('load', function() {
-        const trackDate = $('#track-date');
-        trackDate.attr('value', new Date().toISOString().substring(0,10));
-        trackDate.attr('min', new Date().getFullYear() + '-01-01');
-        trackDate.attr('max', new Date(). getFullYear() + '-12-31');
-    });
-</script>
+<!-- required by electron to import module, before import-->
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+<script src="script.js" type="text/javascript"></script>
+<!-- required by electron to import module, after import-->
+<script>if (window.module) module = window.module;</script>
 
 </body>
 </html>
